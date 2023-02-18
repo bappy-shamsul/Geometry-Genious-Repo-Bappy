@@ -34,9 +34,8 @@ function setBg(){
     const finalValue = getArea2(getValue1, getValue2)
     console.log(finalValue)
 
-    const textValueFinal = textValue('triangle')
-    textValueFinal = finalValue;
-    console.log(textValueFinal)
+    const element = document.getElementById('triangle');
+    element.innerText = finalValue;
   })
 
 
