@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry-Genious-Calculation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <section class="mt-8 bg-sky-100 md:px-12 lg:px-12 flex flex-col md:flex-row lg:flex-row flex-around justify-between content-center items-center w-full">
+            <div>
+                <h1 class="font-bold text-5xl">Interactive</h1>
+                <h3 class="text-3xl font-bold">Geometry Genius</h3>
+            </div>
+            <div>
+                <button class="btn btn-info">Blog</button>
+            </div>
+        </section>
+    </header>
+
+    <main class="flex flex-col md:flex-row lg:flex-row">
+        <section id="card" class="mt-10 md:px-12 lg:px-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-[75%]">
+            <div id="card-body" class="card w-full glass">
+                <figure><img class="py-4 px-4" src="./images/triangle.png" alt="triangle"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title text-center mx-auto">Triangle</h2>
+                  <p class="mx-auto">Area(A) = 0.5 x b x h</p>
+                  <div>
+                    <input id="val-1-card-1" class="w-16" type="text">cm
+                    <input id="val-2-card-1" class="w-16"  type="text">cm
+                  </div>                       
+                    <button id="btn-cal-1" class="btn btn-primary hover:bg-blue-800">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            <div class="card w-full glass">
+                <figure><img class="py-8 px-4" src="./images/rectangle.png" alt="rectangle"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title mx-auto">Rectangle</h2>
+                  <p class="mx-auto">Area(A) = w x l</p>
+                  <div class="card-actions justify-end">
+                    <div>
+                        <input class="w-16" type="text">cm
+                        <input class="w-16"  type="text">cm
+                      </div>
+                    </div>                       
+                    <button class="btn btn-primary hover:bg-blue-800">Calculate</button>
+                  </div>
+                </div>
+              </div>
+            <div class="card w-full glass">
+                <figure><img class="py-10 px-4" src="./images/parallelogram.png" alt="paralleogram"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title mx-auto">Paralleogram</h2>
+                  <p class="mx-auto">Area(A) = b x h</p>
+                  <div class="card-actions justify-end">
+                    <div>
+                        <input class="w-16" type="text">cm
+                        <input class="w-16"  type="text">cm
+                      </div>
+                    </div>                       
+                    <button class="btn btn-primary hover:bg-blue-800">Calculate</button>
+                  </div>
+                </div>
+            <div class="card w-full glass hover:bg-sky-400">
+                <figure><img class="py-10 px-4" src="./images/rhombus.png" alt="rhombus"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title mx-auto">Rhombus</h2>
+                  <p class="mx-auto">Area(A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                  <div class="card-actions justify-end">
+                    <div>
+                        <input class="w-16" type="text">cm
+                        <input class="w-16"  type="text">cm
+                      </div>
+                    </div>                       
+                    <button class="btn btn-primary hover:bg-blue-800">Calculate</button>
+                  </div>
+                </div>
+            <div  class="card w-full glass">
+                <figure><img class="py-10 px-4" src="./images/pentagon.png" alt="pentagon"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title mx-auto">Pentagon</h2>
+                  <p class="mx-auto">Area(A) = b x h</p>
+                  <div class="card-actions justify-end">
+                    <div>
+                        <input class="w-16" type="text">cm
+                        <input class="w-16"  type="text">cm
+                      </div>
+                    </div>                       
+                    <button class="btn btn-primary hover:bg-blue-800">Calculate</button>
+                  </div>
+                </div>
+            <div class="card w-full glass">
+                <figure><img class="py-10 px-4" src="./images/ellipse.png" alt="ellipse"/></figure>
+                <div class="card-body">
+                  <h2 class="card-title mx-auto mt-12">Ellipse</h2>
+                  <p class="mx-auto">Area(A) = b x h</p>
+                  <div class="card-actions justify-end">
+                    <div>
+                        <input class="w-16" type="text">cm
+                        <input class="w-16"  type="text">cm
+                      </div>
+                    </div>                       
+                    <button class="btn btn-primary hover:bg-blue-800">Calculate</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <section class="mt-10 w-full md:w-[25%] lg:w-[25%] h-[70%] mx-auto border rounded-md">
+            <div>
+                <h1 class="font-semibold text-2xl text-center underline  mb-4">Area Calculation</h1>
+            </div>
+            <div>
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                
+                        <!-- row 1 -->
+                        <tr>
+                          <th>1</th>
+                          <td>Triangle <span id="triangle">000000</span> </td>
+                          <td><button class="bg-primary text-white px-4 rounded-md py-2 hover:bg-blue-800">Convert to m<sup>2</sup></button></td>
+                          
+                        </tr>
+                        <!-- row 2 -->
+                        <tr>
+                          <th>2</th>
+                          <td>Rectangle</td>
+                          <td><button class="bg-primary text-white px-4 rounded-md py-2 hover:bg-blue-800">Convert to m<sup>2</sup></button></td>
+                          
+                        </tr>
+                        <!-- row 3 -->
+                        <tr>
+                          <th>3</th>
+                          <td>Paralleogram</td>
+                          <td><button class="bg-primary text-white px-4 rounded-md py-2 hover:bg-blue-800">Convert to m<sup>2</sup></button></td>
+                        </tr>
+                        <tr>
+                          <th>4</th>
+                          <td>Rhombus</td>
+                          <td><button class="bg-primary text-white px-4 rounded-md py-2 hover:bg-blue-800">Convert to m<sup>2</sup></button></td>
+                          
+                        </tr>
+                        <tr>
+                          <th>5</th>
+                          <td>Pentagon</td>
+                          <td><button class="bg-primary text-white px-4 rounded-md py-2 hover:bg-blue-800">Convert to m<sup>2</sup></button></td>
+                          
+                        </tr>
+                        <tr>
+                          <th>6</th>
+                          <td>Ellipse</td>
+                          <td><button class="bg-primary text-white px-4 rounded-md py-2 hover:bg-blue-800">Convert to m<sup>2</sup></button></td>
+                          
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </section>
+    </main>
+    <script src="./utilities.js"></script>
+    <script src="./geometry-calculation.js"></script>
+</body>
+
+</html>
